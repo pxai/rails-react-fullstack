@@ -21,7 +21,7 @@ test:
   database: db/test.sqlite3
 
 production:
-	<<: *default
-	database: railsreact_production
-	username: railsreact
-	password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+  <<: *default
+  database: railsreact_production
+  username: railsreact
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
