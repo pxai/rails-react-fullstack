@@ -6,10 +6,12 @@ one:
   icon: MyString
   repeat: 1
   calories: 1.5
+  duration: 1
 
 two:
-  name: MyString
-  description: MyString
-  icon: MyString
-  repeat: 1
-  calories: 1.5
+  name: MyString2
+  description: MyString2
+  icon: MyString2
+  repeat: 2
+  calories: 2.5
+  duration: 2
