@@ -1,4 +1,4 @@
-const url = 'http://localhost:3001';
+const url = 'http://localhost:3000/api';
 
 const headers =  {
   'Accept': 'application/json, text/plain, */*',
@@ -6,6 +6,7 @@ const headers =  {
 };
 
 export function getAll () {
+	  console.log('Api GET')
       return fetch(url + '/exercises', {
           method: 'GET'
         }

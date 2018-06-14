@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 import logo from './logo.svg';
 import './App.css';
 
 class Exercise extends Component {
+
+  constructor(props) {
+	  super(props);
+  }
+
   render() {
+	  const exercise = this.props.exercise;
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Exercise</h1>
-        </header>
-        <p className="App-intro">
-			Developed By <a href="https://github.com/pxai">Pello Altadill</a>
-        </p>
-      </div>
+		<div>
+			<h3>Exercise: {exercise.name}</h3>
+			<div><p>{exercise.description}</p></div>
+		</div>
     );
   }
 }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Route, Link, Switch } from 'react-router-dom';
 import Splash from './Splash';
 import NotFound  from './NotFound';
-import Exercise  from './Exercise';
+import Exercises  from './Exercises';
 import About  from './About';
 
 import logo from './logo.svg';
@@ -23,7 +23,7 @@ class App extends Component {
             <Switch>
               <Route exact path='/' component={Splash}/>  
               <Route exact path='/404' component={NotFound}/> 
-              <Route exact path='/exercises' component={Exercise} />
+              <Route exact path='/exercises' component={Exercises} />
               <Route exact path='/about' component={About} />
               <Route component={NotFound} />
           </Switch>
