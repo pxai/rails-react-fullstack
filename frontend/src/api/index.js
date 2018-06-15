@@ -9,7 +9,7 @@ const headers =  {
 
 export function getAll () {
 	  console.log('Api GET')
-      return fetch(url + '/exercises', {
+      return fetch(url + '/api/exercises', {
           method: 'GET',
 		  headers
         }
@@ -18,7 +18,7 @@ export function getAll () {
    }
 
 export function get(id) {
-    return fetch(url +'/exercises/' + id, {
+    return fetch(url +'/api/exercises/' + id, {
         method: 'GET',
 		headers
       }
