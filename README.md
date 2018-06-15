@@ -92,4 +92,10 @@ class AddDurationToExercise < ActiveRecord::Migration[5.1]
   end
 end
 ```
+## Routes
 
+Check routes with
+
+```bash
+rails routes
+```
