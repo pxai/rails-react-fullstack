@@ -5,7 +5,6 @@ import NotFound  from './NotFound';
 import Exercises  from './Exercises';
 import About  from './About';
 
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {

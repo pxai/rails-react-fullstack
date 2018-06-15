@@ -1,4 +1,4 @@
-import { GET_EXERCISES, GET_EXERCISE } from '../actions'
+import { GET_EXERCISES } from '../actions'
 
 let initialExercises = [ ];
 

@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
-import logo from './logo.svg';
-import './App.css';
 
 class Exercise extends Component {
 
   constructor(props) {
 	  super(props);
+	  this.setState({ selected: false});
   }
 
   render() {
