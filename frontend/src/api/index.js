@@ -1,9 +1,10 @@
 const url = (process.env.NODE_ENV === 'development') 
-    ? 'http://localhost:3000'
+    ? 'http://localhost:5000'
 	: 'https://calories-burner.herokuapp.com';
 		
 const headers =  {
-  'Accept': 'application/json, text/plain, */*',
+'Access-Control-Allow-Origin':'*',
+'Accept': 'application/json, text/plain, */*',
   'Content-Type': 'application/json'
 };
 
