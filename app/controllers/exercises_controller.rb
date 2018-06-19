@@ -1,11 +1,15 @@
 class ExercisesController < ApplicationController
  before_action :set_todo, only: [:show, :update, :destroy]
- # GET /exercises
+ skip_before_action :verify_authenticity_token
+# GET /exercises
   def index
     @exercises = Exercise.all
     json_response(@exercises)
   end
 
+  def options
+  	head :ok
+  end
   # POST /exercises
   def create
     @exercise = Exercise.create!(exercise_params)

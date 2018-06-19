@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
           end
         end
         # or '*' for public access
-        # headers['Access-Control-Allow-Origin'] = '*'
+#        headers['Access-Control-Allow-Origin'] = '*'
         headers['Access-Control-Allow-Methods'] = 'GET, OPTIONS'
         headers['Access-Control-Request-Method'] = '*'
         headers['Access-Control-Allow-Headers'] = 'Content-Type'
