@@ -1,0 +1,9 @@
+.Exercise {
+	padding: 1em;
+	margin: 1em;
+}
+
+.Exercise-details span {
+ margin: 1em;	
+ display: inline-block;
+}
