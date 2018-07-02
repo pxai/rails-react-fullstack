@@ -1,0 +1,24 @@
+<h1>Exercises</h1>
+
+<table>
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Repeat</th>
+			<th>Controls</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @exercises.each do |exercise| %>
+		<tr>
+			<td><%= exercise.id %></td>
+			<td><%= exercise.name %></td>
+			<td><%= exercise.description %></td>
+			<td><%= exercise.repeat %></td>
+			<td></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>

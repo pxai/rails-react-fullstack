@@ -12,7 +12,8 @@ Rails.application.routes.draw do
     		render :nothing => true, :status => 200
 	end
 
-	resources	:exercises
+	resources	:exercises, :constraints => { :id => /[0-9\.]+/ }
+	get 'exercises/admin' => 'exercises#admin'
 	scope "/api" , as: "user" do
 	   resources :exercises
 	end

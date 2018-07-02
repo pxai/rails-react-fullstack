@@ -10,17 +10,20 @@ class ExercisesController < ApplicationController
   def options
   	head :ok
   end
-  # POST /exercises
+
+  def admin
+  	@exercises = Exercise.all
+  end
   def new
   	@exercise = Exercise.new
   end
 
+  # Api
   def create
     @exercise = Exercise.create!(exercise_params)
     json_response(@exercise, :created)
   end
 
-  # GET /exercises/:id
   def show
     json_response(@exercise)
   end
