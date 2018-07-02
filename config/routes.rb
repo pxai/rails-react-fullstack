@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     		render :nothing => true, :status => 200
 	end
 
+	resources	:exercises
 	scope "/api" , as: "user" do
 	   resources :exercises
 	end
