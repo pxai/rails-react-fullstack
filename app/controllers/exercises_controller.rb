@@ -22,7 +22,7 @@ class ExercisesController < ApplicationController
   def create
     @exercise = Exercise.new(exercise_params)
 	if @exercise.save
-		format.html { redirect_to @exercise, notice: 'Exercise created' }
+		redirect_to @exercise, notice: 'Exercise created' 
 	else
 		render :new 
 	end
