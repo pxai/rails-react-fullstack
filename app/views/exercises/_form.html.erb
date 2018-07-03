@@ -1,1 +1,38 @@
 <h2>Exercises form</h2>
+<%= form_with(model: exercise, local: true) do |form| %>
+	<% if exercise.errors.any? %>
+		<h2><%= pluralize(exercise.errors.count, "error") %> . Could not be saved</h2>
+		<% exercise.errors.full_messages.each do |message| %>
+			<div><%=message %></div>
+		<% end %>
+	<% end %>
+
+	<div>
+		<%= form.label :name %>
+		<%= form.text_field :name %>
+	</div>
+	<div>
+		<%= form.label :description%>
+		<%= form.text_area :description %>
+	</div>
+	<div>
+		<%= form.label :icon %>
+		<%= form.text_field :icon %>
+	</div>
+	<div>
+		<%= form.label :repeat %>
+		<%= form.text_field :repeat %>
+	</div>
+	<div>
+		<%= form.label :calories %>
+		<%= form.text_field :calories %>
+	</div>
+	<div>
+		<%= form.label :duration%>
+		<%= form.text_field :duration %>
+	</div>
+
+	<div>
+		<%=form.submit %>
+	</div>
+<% end %>

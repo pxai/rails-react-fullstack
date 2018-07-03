@@ -1,7 +1,7 @@
 class ExercisesController < ApplicationController
  before_action :set_exercise, only: [:show, :update, :destroy]
  skip_before_action :verify_authenticity_token
-# GET /exercises
+  
   def index
     @exercises = Exercise.all
     json_response(@exercises)
@@ -14,14 +14,18 @@ class ExercisesController < ApplicationController
   def admin
   	@exercises = Exercise.all
   end
+ 
   def new
   	@exercise = Exercise.new
   end
 
-  # Api
   def create
-    @exercise = Exercise.create!(exercise_params)
-    json_response(@exercise, :created)
+    @exercise = Exercise.new(exercise_params)
+	if @exercise.save
+		format.html { redirect_to @exercise, notice: 'Exercise created' }
+	else
+		render :new 
+	end
   end
 
   def show
@@ -43,8 +47,7 @@ class ExercisesController < ApplicationController
   private
 
   def exercise_params
-    # whitelist params
-    params.permit(:name, :description)
+    params.require(:exercise).permit(:name, :description, :icon, :calories, :repeat, :duration)
   end
 
   def set_exercise
